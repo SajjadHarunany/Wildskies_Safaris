@@ -12,8 +12,8 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicon (used in the browser tab) -->
-    <link rel="icon" type="image/jpeg" href="Wildskies.jpeg">
-    <link rel="shortcut icon" type="image/x-icon" href="Wildskies.jpeg">
+    <link rel="icon" type="image/jpeg" href="Images/Wildskies.jpeg">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/Wildskies.jpeg">
 
 </head>
 <body>
@@ -23,17 +23,23 @@
         <div class="container">
             <!-- Correct Logo Image Tag -->
             <a href="#" class="logo">
-                <img src="Wildskies.jpeg" alt="Wildskies Safaris Logo" class="logo-img">
+                <img src="Images/Wildskies.jpeg" alt="Wildskies Safaris Logo" class="logo-img">
             </a>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#flights">Flights</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="nav-cta">
-                <a href="https://wa.me/254728223861" target="_blank" class="btn btn-primary">Book Now</a>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="index.html#blog">Blog</a>
+                    <a href="index.html#flights">Flights</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="nav-cta">
+                    <a href="https://wa.me/254728223861" target="_blank" class="btn btn-primary">Book Now</a>
+                </div>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </header>
 
@@ -48,7 +54,7 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Design A Custom Private Safari</h1>
-            <p>If you're enticed by a specific safari theme; wildlife, beach holiday or geography; we'll make it happen for you. Privacy, flexibility and unforgettable Kenyan adventures.</p>
+            <p>Experience the pinnacle of convenience with our fly-in safaris. We handle every detail, from private flights to luxury lodges, ensuring a seamless and exclusive adventure into the heart of Kenya.</p>
             <div class="hero-cta">
                 <a href="https://wa.me/254728223861" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Plan Your Safari</a>
             </div>
@@ -67,9 +73,9 @@
                 <p>Founded on a passion for conservation and wildlife, we provide highly personalized safari advice. We construct itineraries catering to your special needs, paying extra attention to detail from beginning to end.</p>
                 
                 <ul class="about-list">
-                    <li><div class="icon-circle-small"><i class="fas fa-leaf"></i></div> <div><h4>Private & Custom Tours</h4><p>Tailored to your interests, budget, and pace.</p></div></li>
-                    <li><div class="icon-circle-small"><i class="fas fa-car"></i></div> <div><h4>Quality Safari Vehicles</h4><p>Comfortable, well-maintained 4x4 Land Cruisers.</p></div></li>
-                    <li><div class="icon-circle-small"><i class="fas fa-star"></i></div> <div><h4>Expert Local Guides</h4><p>Passionate, knowledgeable, and friendly guides.</p></div></li>
+                    <li><div class="icon-circle-small"><i class="fas fa-leaf"></i></div> <div><h4>Bespoke Itineraries</h4><p>Private and custom tours tailored to your interests, budget, and pace.</p></div></li>
+                    <li><div class="icon-circle-small"><i class="fas fa-car"></i></div> <div><h4>Luxury Safari Fleet</h4><p>Travel in our top-of-the-line, air-conditioned 4x4 Land Cruisers.</p></div></li>
+                    <li><div class="icon-circle-small"><i class="fas fa-star"></i></div> <div><h4>Elite Private Guides</h4><p>Accompanied by Kenya's finest guides for an unparalleled wildlife experience.</p></div></li>
                 </ul>
             </div>
         </div>
@@ -105,18 +111,69 @@
         </div>
     </section>
 
+    <!-- Blog / Testimonials Section -->
+    <section id="blog" class="section bg-light">
+        <div class="container">
+            <div class="text-center">
+                <p class="subtitle-caps">CLIENT EXPERIENCES</p>
+                <h2 class="section-title">Stories From The Wild</h2>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"An absolutely unforgettable journey through the Maasai Mara. Wildskies handled everything with such care and professionalism. Our guide, Daniel, was a true expert and made our trip magical. We saw the Big Five and so much more!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client photo">
+                        <div>
+                            <h4>Sarah & Tom Jenkins</h4>
+                            <span>Safari in Maasai Mara</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"We booked a custom family safari to Tsavo and Amboseli. The team was incredibly flexible with our itinerary and budget. The kids loved it, and the lodges they picked were fantastic. Highly recommend for a family adventure."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Client photo">
+                        <div>
+                            <h4>The Miller Family</h4>
+                            <span>Family Safari to Tsavo</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"From the flight bookings to the final day of our safari, everything was seamless. The attention to detail is what sets Wildskies apart. It felt like a true luxury experience without the exorbitant price tag. We'll be back!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="Client photo">
+                        <div>
+                            <h4>David Chen</h4>
+                            <span>Kenya Discovery Tour</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Flight Booking Section -->
-    <section id="flights" class="section bg-light">
+    <section id="flights" class="section">
         <div class="container about-layout">
             <div class="about-text">
                 <p class="subtitle-caps">SEAMLESS TRAVEL</p>
-                <h2 class="section-title" style="margin-bottom: 1.5rem;">Book Your Flights With Us</h2>
-                <p>We handle all your travel needs, including domestic and international flight bookings. Let us find the best routes and fares to connect you to your safari adventure and beyond.</p>
+                <h2 class="section-title" style="margin-bottom: 1.5rem;">Exclusive Fly-In Safaris</h2>
+                <p>Maximise your time in the wild. We arrange private charter and scheduled flights directly to airstrips in the Maasai Mara, Tsavo, and other premier parks, connecting you seamlessly from your arrival to the heart of the adventure.</p>
                 
                 <ul class="about-list">
-                    <li><div class="icon-circle-small"><i class="fas fa-plane-departure"></i></div> <div><h4>Domestic Flights</h4><p>Connect easily between Nairobi, Mombasa, and the Maasai Mara.</p></div></li>
-                    <li><div class="icon-circle-small"><i class="fas fa-globe-africa"></i></div> <div><h4>International Travel</h4><p>We coordinate your international flights for a stress-free arrival.</p></div></li>
-                    <li><div class="icon-circle-small"><i class="fas fa-tags"></i></div> <div><h4>Best Fare Guarantee</h4><p>Leveraging our partnerships to find you the best prices.</p></div></li>
+                    <li><div class="icon-circle-small"><i class="fas fa-plane-departure"></i></div> <div><h4>Private & Scheduled Air Travel</h4><p>Fly directly to national park airstrips, avoiding long road journeys.</p></div></li>
+                    <li><div class="icon-circle-small"><i class="fas fa-globe-africa"></i></div> <div><h4>Seamless Connections</h4><p>We coordinate your international arrivals with your safari itinerary for a stress-free experience.</p></div></li>
+                    <li><div class="icon-circle-small"><i class="fas fa-concierge-bell"></i></div> <div><h4>All-Inclusive Service</h4><p>Your flights, luxury transport, and lodge bookings are all handled by our expert team.</p></div></li>
                 </ul>
                 <a href="https://wa.me/254728223861?text=I'm%20interested%20in%20a%20flight%20enquiry" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Enquire About Flights</a>
             </div>
@@ -129,9 +186,9 @@
 
     <!-- Contact & Map Section -->
     <section id="contact" class="section">
-        <div class="container contact-layout">
+        <div class="container">
             <!-- Contact Details -->
-            <div class="details-box">
+            <div class="details-box centered-box">
                 <h2>Get In Touch</h2>
                 <p><strong>Wildskies Safaris</strong></p>
                 <p><i class="fas fa-phone text-primary"></i> +254 728 223861</p>
@@ -140,7 +197,8 @@
                 <h3 class="mt-2">Instant Support</h3>
                 <a href="https://wa.me/254728223861" target="_blank" class="btn btn-whatsapp" style="margin-top: 10px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
-
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -155,7 +213,10 @@
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#flights">Flight Enquiry</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -187,16 +248,28 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Navbar scroll effect
             const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) { // A bit sooner for smaller header
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
 
+            // Navbar scroll effect for homepage
+            if (navbar && !navbar.classList.contains('scrolled')) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 20) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            // Hamburger menu toggle for all pages
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
         });
     </script>
 </body>

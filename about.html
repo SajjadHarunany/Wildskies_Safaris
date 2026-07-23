@@ -15,17 +15,23 @@
         <div class="container">
             <!-- Ensure your logo img tag is here as discussed -->
             <a href="index.html" class="logo">
-                <img src="Wildskies.jpeg" alt="Wildskies Safaris Logo" class="logo-img">
+                <img src="Images/Wildskies.jpeg" alt="Wildskies Safaris Logo" class="logo-img">
             </a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#about" class="active">About Us</a>
-                <a href="index.html#flights">Flights</a>
-                <a href="index.html#contact">Contact</a>
-            </nav>
-            <div class="nav-cta">
-                <a href="https://wa.me/254728223861" target="_blank" class="btn btn-primary">Book Now</a>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About Us</a>
+                    <a href="index.html#blog">Blog</a>
+                    <a href="index.html#flights">Flights</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="nav-cta">
+                    <a href="https://wa.me/254728223861" target="_blank" class="btn btn-primary">Book Now</a>
+                </div>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </header>
 
@@ -34,7 +40,7 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content text-center">
             <h1>About Wildskies Safaris</h1>
-            <p>Your trusted partner for authentic Kenyan adventures and reliable transport.</p>
+            <p>Your trusted partner for exclusive, tailor-made safari experiences in Kenya.</p>
         </div>
     </section>
 
@@ -43,16 +49,34 @@
         <div class="container about-layout">
             <div class="about-text">
                 <h2>Who We Are</h2>
-                <p>Based in the vibrant coastal city of Mombasa, Wildskies Safaris is a premier tour operator and car hire service dedicated to showcasing the true beauty of Kenya. We specialize in custom, private safaris that take you off the beaten path and into the heart of the wild.</p>
+                <p>Based in the vibrant coastal city of Mombasa, Wildskies Safaris is a premier tour operator specializing in high-end, custom safaris. We move beyond the ordinary, crafting private journeys that take you into the heart of Kenya's most exclusive destinations.</p>
                 
                 <h3 class="mt-2">Our Mission</h3>
-                <p>To provide unforgettable, seamless, and affordable travel experiences while promoting sustainable tourism that benefits local communities and preserves Kenya's wildlife heritage.</p>
+                <p>To provide unforgettable, seamless, and luxurious travel experiences while promoting sustainable tourism that benefits local communities and preserves Kenya's wildlife heritage.</p>
 
-                <h3 class="mt-2">Why Choose Us?</h3>
+                <h3 class="mt-2">Our Core Principles</h3>
                 <ul class="about-list">
-                    <li><i class="fas fa-check-circle"></i> <strong>Local Expertise:</strong> Our guides know the parks intimately.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Custom Itineraries:</strong> We build the trip around your budget and timeline.</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Reliable Fleet:</strong> Well-maintained vehicles for safaris.</li>
+                    <li>
+                        <div class="icon-circle-small"><i class="fas fa-user-check"></i></div>
+                        <div>
+                            <h4>Bespoke & Personal</h4>
+                            <p>We design journeys around you. Every itinerary is a unique conversation, tailored to your interests and desires for an exclusive adventure.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-circle-small"><i class="fas fa-binoculars"></i></div>
+                        <div>
+                            <h4>Authentic Expertise</h4>
+                            <p>Our guides are Kenya's finest naturalists and storytellers, offering deep insights and unparalleled access to the wild.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-circle-small"><i class="fas fa-gem"></i></div>
+                        <div>
+                            <h4>Uncompromising Quality</h4>
+                            <p>From our luxury 4x4 Land Cruisers to hand-picked lodges and seamless logistics, we ensure every detail of your journey is flawless.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="about-image">
@@ -74,8 +98,11 @@
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
                     <li><a href="index.html#flights">Flight Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -104,5 +131,31 @@
         </a>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.querySelector('.navbar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            // Navbar scroll effect for homepage
+            if (navbar && !navbar.classList.contains('scrolled')) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 20) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            // Hamburger menu toggle for all pages
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
