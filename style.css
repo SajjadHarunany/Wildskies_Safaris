@@ -796,11 +796,12 @@ footer {
         transform: none;
     }
 
-    .nav-links a {
+    .nav-menu .nav-links a {
         color: var(--white);
         font-size: 1.2rem;
     }
-    .nav-links a.active, .nav-links a:hover {
+    .nav-menu .nav-links a.active, 
+    .nav-menu .nav-links a:hover {
         color: var(--primary);
     }
 
