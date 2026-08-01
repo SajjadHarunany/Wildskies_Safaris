@@ -151,6 +151,7 @@ body {
 .nav-toggle {
     display: none; /* Hidden on desktop */
     z-index: 1001;
+    position: relative; /* Ensures the toggle button (and 'X' icon) appears above the slide-out menu */
 }
 
 .navbar.scrolled .nav-cta .btn-primary {
