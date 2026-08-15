@@ -8,7 +8,7 @@
     --whatsapp: #25d366;      /* WhatsApp Green */
     --whatsapp-hover: #128c7e;
     --light: #f8f9fa;         /* Light Grey Background */
-    --text: #555555;
+    --text: #444444;
     --white: #ffffff;
     --navy: #1c1c1c; /* Dark color for footer to match logo */
     --border-radius: 8px;
@@ -83,6 +83,7 @@ body {
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping on very small screens */
     position: relative; /* For positioning context */
+    gap: 1rem;
 }
 
 .navbar.scrolled {
@@ -113,19 +114,18 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Increased gap for bigger text */
-    /* Center the nav links on desktop */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 1.2rem;
+    position: static;
+    transform: none;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--white); /* White text on transparent nav */
     font-weight: 600;
-    font-size: 1rem; /* Increased from 0.95rem */
+    font-size: 0.92rem;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -141,7 +141,8 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Space between nav links and button */
+    gap: 1.5rem; /* Space between nav links and button */
+    margin-left: auto;
 }
 
 .nav-cta {
@@ -192,6 +193,19 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-ghost {
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+    color: var(--dark);
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
 .btn-whatsapp {
     background-color: var(--whatsapp);
     color: var(--white);
@@ -204,7 +218,7 @@ body {
 
 .hero {
     position: relative;
-    height: 100vh; /* Full screen height */
+    min-height: 100vh; /* Full screen height */
     display: flex;
     align-items: center;
     color: var(--white);
@@ -218,18 +232,34 @@ body {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    background: linear-gradient(90deg, rgba(0,0,0,0.78), rgba(0,0,0,0.35) 58%, rgba(0,0,0,0.15));
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    max-width: 680px;
+}
+
+.hero-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    margin-bottom: 0.25rem;
+}
+
+.hero-tagline {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    font-size: 3.2rem;
     margin-bottom: 1rem;
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -241,6 +271,27 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
+.hero-content .hero-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+    margin-bottom: 0.25rem;
+}
+
+.hero-content .hero-tagline {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 /* Inner Page Hero */
 .page-hero {
     position: relative;
@@ -249,10 +300,23 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--white);
-    background-image: url('https://images.unsplash.com/photo-1525026198548-4487767b93d2?auto=format&fit=crop&w=1920&q=80');
+    background-color: #0b1220;
+    background-image: linear-gradient(135deg, rgba(15,15,20,0.75), rgba(10,30,20,0.55));
     background-size: cover;
-    background-position: center 30%;
+    background-position: center;
+    background-blend-mode: overlay;
     padding-top: 90px; /* Offset for fixed navbar */
+}
+
+/* Left-align hero content on larger screens to reduce cramped centered text */
+.hero-left { text-align: left; }
+@media(min-width: 992px) {
+    .hero-left { margin-left: 4%; }
+}
+
+@media(min-width: 768px) {
+    .hero-content .hero-brand { font-size: 1.35rem; }
+    .hero-content p { font-size: 1.05rem; }
 }
 
 .page-hero .hero-content h1 {
@@ -728,7 +792,335 @@ footer {
 }
 
 /* =========================================
-   10. RESPONSIVE DESIGN
+   10. LUXURY HOMEPAGE SECTIONS
+   ========================================= */
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.section-heading .section-title {
+    margin-bottom: 1rem;
+}
+
+.destinations-section {
+    background-color: #fbfaf7;
+}
+
+.destination-grid,
+.itinerary-grid,
+.blog-preview {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.destination-card {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.16);
+}
+
+.destination-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.86), rgba(0,0,0,0.25) 62%, rgba(0,0,0,0.08));
+}
+
+.beach-card {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+}
+
+.destination-card-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    padding: 2rem;
+}
+
+.destination-card h3,
+.itinerary-card h3,
+.advantage-card h3,
+.blog-preview h3 {
+    color: var(--dark);
+    line-height: 1.25;
+}
+
+.destination-card h3 {
+    color: var(--white);
+    font-size: 1.65rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-kicker,
+.duration {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-kicker {
+    color: var(--dark);
+    background-color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.standout {
+    margin-top: 1rem;
+}
+
+.light-link {
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.light-link:hover {
+    color: var(--primary);
+}
+
+.itinerary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.itinerary-card,
+.advantage-card,
+.blog-preview article {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid #ece6dc;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+}
+
+.itinerary-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.featured-itinerary {
+    border-top: 4px solid var(--primary);
+}
+
+.duration {
+    color: var(--primary);
+    background-color: #fff3dd;
+    margin-bottom: 1.2rem;
+}
+
+.route {
+    color: var(--primary);
+    font-weight: 700;
+    margin: 0.4rem 0 1rem;
+}
+
+.itinerary-card ul {
+    list-style: none;
+    margin: 1.2rem 0 1.5rem;
+}
+
+.itinerary-card li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.65rem;
+}
+
+.itinerary-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.itinerary-card .card-link {
+    margin-top: auto;
+}
+
+.custom-note {
+    max-width: 820px;
+    margin: 2rem auto 0;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.advantage-card {
+    padding: 1.6rem 1.2rem;
+    text-align: center;
+}
+
+.advantage-card .icon-circle-large {
+    width: 64px;
+    height: 64px;
+    font-size: 1.45rem;
+    margin-bottom: 1rem;
+}
+
+.advantage-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.65rem;
+}
+
+.advantage-card p {
+    font-size: 0.9rem;
+}
+
+.about-teaser .rounded-img {
+    box-shadow: 0 20px 55px rgba(0,0,0,0.35);
+}
+
+.light-text,
+.light-text h2 {
+    color: var(--white);
+}
+
+.light-text p:not(.subtitle-caps) {
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 1.2rem;
+}
+
+.blog-preview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.blog-preview article {
+    padding: 1.8rem;
+}
+
+.blog-preview h3 {
+    margin-bottom: 0.8rem;
+}
+
+.inquiry-section {
+    color: var(--white);
+    background:
+        linear-gradient(90deg, rgba(0,0,0,0.86), rgba(0,0,0,0.56)),
+        url('Images/lion6.jpeg') center/cover;
+}
+
+.inquiry-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.inquiry-copy h2 {
+    color: var(--white);
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.inquiry-copy > p:not(.subtitle-caps) {
+    max-width: 680px;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.82);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-grid div {
+    padding: 1.2rem;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--border-radius);
+    background-color: rgba(255,255,255,0.08);
+}
+
+.contact-grid span {
+    display: block;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.55rem;
+    text-transform: uppercase;
+}
+
+.contact-grid a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-grid a:hover {
+    color: var(--primary);
+}
+
+.inquiry-form {
+    display: grid;
+    gap: 0.7rem;
+    padding: 1.6rem;
+    color: var(--dark);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 55px rgba(0,0,0,0.25);
+}
+
+.inquiry-form p {
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.inquiry-form label {
+    color: var(--dark);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    border: 1px solid #ddd5c8;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 0.9rem;
+    color: var(--dark);
+    font: inherit;
+    background-color: #fffdf8;
+}
+
+.inquiry-form textarea {
+    resize: vertical;
+}
+
+/* =========================================
+   11. RESPONSIVE DESIGN
    ========================================= */
 @media (max-width: 992px) {
     .container {
@@ -853,6 +1245,29 @@ footer {
     .section-title { font-size: 1.8rem; margin-bottom: 2rem; }
     .section { padding: 3.5rem 0; }
 
+    .destination-grid,
+    .itinerary-grid,
+    .blog-preview,
+    .inquiry-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        min-height: 460px;
+    }
+
+    .inquiry-copy h2 {
+        font-size: 2.35rem;
+    }
+
     /* On mobile, put image on top for the "Why Travel With Us" section */
     #about .about-layout .about-image {
         order: -1;
@@ -866,6 +1281,18 @@ footer {
 
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content p { font-size: 1rem; }
+    .hero-content .hero-brand { font-size: 1.15rem; }
+    .hero-content .hero-tagline { font-size: 0.78rem; letter-spacing: 2px; }
+    .hero-cta .btn { width: 100%; justify-content: center; }
+    .destination-card { min-height: 540px; }
+    .destination-card-content,
+    .itinerary-card,
+    .blog-preview article,
+    .inquiry-form {
+        padding: 1.3rem;
+    }
+    .advantage-grid { grid-template-columns: 1fr; }
+    .inquiry-copy h2 { font-size: 2rem; }
     .page-hero .hero-content h1 { font-size: 1.8rem; }
     .page-hero .hero-content p { font-size: 0.9rem; }
     .logo-img { max-height: 55px; }
