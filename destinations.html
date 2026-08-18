@@ -115,5 +115,60 @@
             <p>&copy; 2026 Wild Skies Safaris. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.querySelector('.navbar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (navbar && !navbar.classList.contains('scrolled')) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 20) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            if (navToggle && navMenu) {
+                const closeMenu = () => {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                };
+
+                const toggleMenu = () => {
+                    if (navMenu.classList.contains('active')) {
+                        closeMenu();
+                    } else {
+                        navMenu.classList.add('active');
+                        navToggle.classList.add('active');
+                    }
+                };
+
+                navToggle.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    toggleMenu();
+                });
+
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                document.addEventListener('click', (event) => {
+                    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                        closeMenu();
+                    }
+                });
+
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') {
+                        closeMenu();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

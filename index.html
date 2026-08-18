@@ -100,58 +100,6 @@
             </div>
         </section>
 
-        <section id="itineraries" class="section bg-light">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="subtitle-caps">Sample Journeys</p>
-                    <h2 class="section-title">Flagship Safari Concepts</h2>
-                    <p>Begin with one of our signature routes, then let us shape the pace, camps, guiding style and special moments around you.</p>
-                </div>
-                <div class="itinerary-grid">
-                    <article class="itinerary-card">
-                        <span class="duration">7 Days / 6 Nights</span>
-                        <h3>The Classic Fly-In Luxury Safari</h3>
-                        <p class="route">Masai Mara &amp; Amboseli</p>
-                        <p>A polished introduction to Kenya's most iconic safari landscapes, designed for travelers who want extraordinary wildlife viewing without compromise.</p>
-                        <ul>
-                            <li>Scenic fly-in transfers</li>
-                            <li>Big cat viewing in the Mara</li>
-                            <li>Elephants beneath Kilimanjaro</li>
-                            <li>Elegant tented camps and sundowners</li>
-                        </ul>
-                        <a href="#inquiry" class="card-link">View the Classic Safari <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                    <article class="itinerary-card featured-itinerary">
-                        <span class="duration">9 Days / 8 Nights</span>
-                        <h3>Bush to Beach Elegance</h3>
-                        <p class="route">Mara Wildlife + Diani Coastal Relaxation</p>
-                        <p>Begin with the pulse of the wild in the Masai Mara, then trade savannah gold for white sand and Indian Ocean blue.</p>
-                        <ul>
-                            <li>Mara game drives and optional balloon safari</li>
-                            <li>Luxury lodge and beach stays</li>
-                            <li>Private coastal downtime</li>
-                            <li>Ideal for honeymoons and families</li>
-                        </ul>
-                        <a href="#inquiry" class="card-link">View Bush to Beach <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                    <article class="itinerary-card">
-                        <span class="duration">8 Days / 7 Nights</span>
-                        <h3>Untamed Wilderness Expedition</h3>
-                        <p class="route">Tsavo &amp; Amboseli Private Conservancies</p>
-                        <p>For travelers who want space, privacy and a deeper sense of wilderness, this journey explores Kenya's quieter wild regions.</p>
-                        <ul>
-                            <li>Tsavo wilderness drives</li>
-                            <li>Private conservancy access</li>
-                            <li>Off-grid luxury camps</li>
-                            <li>Guided walks and night drives where permitted</li>
-                        </ul>
-                        <a href="#inquiry" class="card-link">View Wilderness Expedition <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                </div>
-                <p class="custom-note">Every Wild Skies itinerary is 100% customizable, from pacing and camp style to private guiding, dietary preferences, celebrations and special interests.</p>
-            </div>
-        </section>
-
         <section id="why-us" class="section">
             <div class="container">
                 <div class="section-heading">
@@ -323,16 +271,39 @@
             }
 
             if (navToggle && navMenu) {
-                navToggle.addEventListener("click", () => {
-                    navMenu.classList.toggle("active");
-                    navToggle.classList.toggle("active");
+                const closeMenu = () => {
+                    navMenu.classList.remove("active");
+                    navToggle.classList.remove("active");
+                };
+
+                const toggleMenu = () => {
+                    if (navMenu.classList.contains("active")) {
+                        closeMenu();
+                    } else {
+                        navMenu.classList.add("active");
+                        navToggle.classList.add("active");
+                    }
+                };
+
+                navToggle.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    toggleMenu();
                 });
 
                 navMenu.querySelectorAll("a").forEach((link) => {
-                    link.addEventListener("click", () => {
-                        navMenu.classList.remove("active");
-                        navToggle.classList.remove("active");
-                    });
+                    link.addEventListener("click", closeMenu);
+                });
+
+                document.addEventListener("click", (event) => {
+                    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                        closeMenu();
+                    }
+                });
+
+                document.addEventListener("keydown", (event) => {
+                    if (event.key === "Escape") {
+                        closeMenu();
+                    }
                 });
             }
         });
