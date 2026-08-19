@@ -95,9 +95,14 @@ body {
 }
 
 .logo-img {
-    max-height: 65px;
+    max-height: 46px;
     width: auto;
     display: block;
+    transition: max-height 0.4s ease;
+}
+/* On the homepage, the logo is large before scrolling */
+.navbar:not(.scrolled) .logo-img {
+    max-height: 110px;
 }
 
 .logo {
@@ -222,7 +227,7 @@ body {
     display: flex;
     align-items: center;
     color: var(--white);
-    padding-top: 90px; /* Offset for fixed navbar */
+    padding-top: 150px; /* Increased offset for taller initial navbar on homepage */
     box-sizing: border-box; /* Include padding in height calculation */
     background-image: url('Images/lion9.jpeg'); /* Default for desktop/tablet */
     background-size: cover;
