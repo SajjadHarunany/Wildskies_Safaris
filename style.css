@@ -1617,12 +1617,6 @@ footer {
     .nav-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; background-color: var(--white); }
     .nav-toggle.active .hamburger::after { transform: rotate(-45deg); top: 0; background-color: var(--white); }
 
-    /* When menu is open, make 'X' dark on scrolled nav */
-    .navbar.scrolled .nav-toggle.active .hamburger::before,
-    .navbar.scrolled .nav-toggle.active .hamburger::after {
-        background-color: var(--dark);
-    }
-
     /* --- Typography & Spacing --- */
     .hero-content h1 { font-size: 2.8rem; }
     .page-hero { height: 40vh; }
@@ -1913,5 +1907,12 @@ footer {
     /* On mobile homepage, keep logo large until scroll */
     .navbar:not(.scrolled) .logo-img {
         max-height: 110px;
+    }
+
+    /* Center quote button on itineraries page for mobile */
+    .custom-note + .btn {
+        display: block;
+        margin: 1.5rem auto 0;
+        width: fit-content;
     }
 }
