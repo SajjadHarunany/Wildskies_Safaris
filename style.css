@@ -1909,4 +1909,9 @@ footer {
     .page-hero .hero-content p { font-size: 0.9rem; }
     .logo-img { max-height: 55px; }
     .floating-actions { bottom: 1rem; right: 1rem; }
+
+    /* On mobile homepage, keep logo large until scroll */
+    .navbar:not(.scrolled) .logo-img {
+        max-height: 110px;
+    }
 }
