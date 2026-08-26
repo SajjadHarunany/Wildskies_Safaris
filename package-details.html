@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Package | Wild Skies Safaris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="Images/Wildskies.jpeg">
+</head>
+<body class="package-detail">
+    <header class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="Images/Wildskies.jpeg" alt="Wild Skies Safaris Logo" class="logo-img"></a>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="itineraries.html" class="active">Itineraries &amp; Packages</a>
+                    <a href="about.html">About Us</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+                <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Design Your Custom Safari</a></div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+        </div>
+    </header>
+
+    <section class="page-hero page-hero-package">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center">
+            <p class="hero-tagline">WILD SKIES SAFARIS</p>
+            <h1 id="hero-title">Safari Package</h1>
+            <p id="hero-summary">A private Kenyan journey shaped around your travel style.</p>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <div class="package-detail-intro">
+                <p class="subtitle-caps" id="package-category">Signature Journey</p>
+                <h2 id="package-title">Safari Package</h2>
+                <p class="package-route" id="package-route">Kenya safari</p>
+                <p id="package-description">Designed for travelers who want thoughtful pacing, beautiful stays and more time in the places that matter.</p>
+            </div>
+
+            <div class="package-detail-layout">
+                <div>
+                    <div class="package-panel">
+                        <h3>Journey at a glance</h3>
+                        <div class="package-facts">
+                            <div class="package-fact"><strong>Duration</strong><span id="package-duration"></span></div>
+                            <div class="package-fact"><strong>Travel style</strong><span id="package-style"></span></div>
+                            <div class="package-fact"><strong>Accommodation</strong><span id="package-accommodation"></span></div>
+                            <div class="package-fact"><strong>Best for</strong><span id="package-best-for"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="package-panel itinerary-panel">
+                        <p class="subtitle-caps">Your days in Kenya</p>
+                        <h3>Itinerary</h3>
+                        <div class="day-list" id="day-list"></div>
+                    </div>
+                </div>
+
+                <aside class="package-panel">
+                    <h3>Included in your journey</h3>
+                    <ul id="package-includes"></ul>
+                    <h3>Not included</h3>
+                    <ul id="package-excludes"></ul>
+                    <a id="whatsapp-booking-link" href="https://wa.me/254728223861" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Enquire on WhatsApp</a>
+                    <a href="itineraries.html" class="btn btn-ghost">Back to all packages</a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col"><div class="footer-brand"><img src="Images/Wildskies.jpeg" alt="Wild Skies Safaris Logo" class="footer-logo"></div><p>Luxury fly-in safaris and bespoke private journeys across Kenya's most extraordinary wild places.</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="itineraries.html">Itineraries &amp; Packages</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+            <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact-list"><li><i class="fas fa-phone"></i><a href="tel:+254728223861">+254 728 223861</a></li><li><i class="far fa-envelope"></i><a href="mailto:info@wildskiessafaris.com">info@wildskiessafaris.com</a></li></ul></div>
+        </div>
+        <div class="footer-bottom container"><p>&copy; 2026 Wild Skies Safaris. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        const packages = {
+            'golden-horizon': { category: 'Premium', title: 'Golden Horizon', summary: 'Three immersive nights in the Masai Mara with luxury accommodation and front-row access to iconic wildlife.', route: 'Masai Mara', duration: '3 nights / 4 days', style: 'Luxury fly-in safari', accommodation: 'Selected Mara lodge', bestFor: 'Big Five viewing', days: ['Arrive in the Masai Mara, settle into your lodge and enjoy an afternoon game drive.', 'Set out before breakfast for a full day of wildlife viewing, with time to relax between drives.', 'Enjoy a final morning game drive before transferring to the airstrip for your onward flight.'] },
+            'ivory-plains': { category: 'Premium', title: 'Ivory Plains', summary: 'Three nights in Amboseli, with elephant-rich plains and uninterrupted views of Mount Kilimanjaro.', route: 'Amboseli', duration: '3 nights / 4 days', style: 'Luxury fly-in safari', accommodation: 'Selected Amboseli lodge', bestFor: 'Elephant encounters', days: ['Arrive in Amboseli, check in and take your first afternoon drive beneath Kilimanjaro.', 'Spend a full day exploring the park, with early and late drives timed for wildlife and photography.', 'Enjoy a final morning on the plains before transferring to the airstrip.'] },
+            'seaside-retreat': { category: 'Premium', title: 'Seaside Retreat', summary: 'A seamless journey through the Mara, Amboseli and Diani, from big-game country to barefoot coastal luxury.', route: 'Masai Mara - Amboseli - Diani', duration: '8 nights / 9 days', style: 'Safari and coast escape', accommodation: 'Selected lodges and resort', bestFor: 'Bush-to-beach travel', days: ['Arrive in the Masai Mara and begin with an afternoon game drive.', 'Explore the Mara with early and late drives, then fly onward to Amboseli.', 'Discover Amboseli beneath Kilimanjaro before continuing to Diani Beach.', 'Spend the final days at leisure with optional ocean activities and a relaxed departure.'] },
+            'signature-reserve': { category: 'Luxury', title: 'The Signature Reserve', summary: "Kenya's finest safari and coastal experiences, seamlessly curated into one extraordinary journey.", route: 'Masai Mara - Amboseli - Diani', duration: '11 nights / 12 days', style: 'Signature private journey', accommodation: 'Selected luxury properties', bestFor: 'A complete Kenya escape', days: ['Begin in the Masai Mara with a private transfer, lunch and an afternoon game drive.', 'Spend three full days following wildlife across the Mara at an unhurried pace.', 'Fly to Amboseli for two days of elephant encounters and Kilimanjaro views.', 'Continue to Diani for four nights of beach time, ocean activities and sunset dinners.', 'Transfer to Ukunda for your onward flight home.'] },
+            'migration-window': { category: 'Specialist', title: 'The Migration Window', summary: "Time your Mara and Amboseli journey around Kenya's most dramatic seasonal wildlife moments.", route: 'Masai Mara - Amboseli', duration: '5 nights / 6 days', style: 'Seasonal wildlife safari', accommodation: 'Selected safari lodges', bestFor: 'Migration and photography', days: ['Arrive in the Mara and begin tracking migration herds on an afternoon drive.', 'Focus on migration routes, predators and river country during a full day in the reserve.', 'Enjoy a final Mara drive before flying to Amboseli.', 'Explore Amboseli at sunrise and sunset, with time for wildlife photography.', 'Transfer to the airstrip for your return flight.'] },
+            'honeymoon-escape': { category: 'Specialist', title: 'Honeymoon Escape', summary: 'An intimate Masai Mara and Diani journey designed for couples seeking privacy and unhurried days.', route: 'Masai Mara - Diani', duration: '6 nights / 7 days', style: 'Private safari and beach', accommodation: 'Selected lodge and beach resort', bestFor: 'Couples and honeymoons', days: ['Fly to the Mara, settle into your lodge and enjoy a private afternoon game drive.', 'Spend two days on safari with relaxed mornings, wildlife drives and time together at camp.', 'Fly to Diani and settle into your beachfront retreat.', 'Enjoy two slow days by the ocean with optional snorkeling, spa time or a private dinner.', 'Transfer to Ukunda for your onward flight.'] },
+            'wildlife-focus': { category: 'Specialist', title: 'The Wildlife Focus', summary: 'Extended Mara and Amboseli game viewing for photographers and travelers who want deeper immersion.', route: 'Masai Mara - Amboseli', duration: '7 nights / 8 days', style: 'Extended wildlife safari', accommodation: 'Selected safari lodges', bestFor: 'Photographers and nature lovers', days: ['Fly to the Mara and begin with an afternoon drive.', 'Spend four full days following wildlife, with flexible drives shaped around sightings and light.', 'Fly to Amboseli for two nights among the elephants and open plains.', 'Enjoy a final morning drive before your return flight.'] }
+        };
+
+        const selected = packages[new URLSearchParams(window.location.search).get('package')] || packages['golden-horizon'];
+        const setText = (id, value) => document.getElementById(id).textContent = value;
+        setText('hero-title', selected.title);
+        setText('hero-summary', selected.summary);
+        setText('package-category', selected.category);
+        setText('package-title', selected.title);
+        setText('package-route', selected.route);
+        setText('package-description', selected.summary);
+        setText('package-duration', selected.duration);
+        setText('package-style', selected.style);
+        setText('package-accommodation', selected.accommodation);
+        setText('package-best-for', selected.bestFor);
+        document.title = `${selected.title} | Wild Skies Safaris`;
+        const whatsappMessage = `Hello Wild Skies Safaris, I am interested in the ${selected.title} package (${selected.route}, ${selected.duration}). Please share availability, pricing and the next steps.`;
+        document.getElementById('whatsapp-booking-link').href = `https://wa.me/254728223861?text=${encodeURIComponent(whatsappMessage)}`;
+        document.getElementById('day-list').innerHTML = selected.days.map((day, index) => `<article class="day-card"><h3><span>Day ${index + 1}</span>${index === selected.days.length - 1 ? 'Departure and onward travel' : 'Safari experience'}</h3><p>${day}</p></article>`).join('');
+        document.getElementById('package-includes').innerHTML = ['Domestic flights as specified in the routing', 'Airstrip and lodge transfers', 'Accommodation and meals as specified', 'Guided game drives with an expert guide', 'Applicable park entry fees'].map(item => `<li>${item}</li>`).join('');
+        document.getElementById('package-excludes').innerHTML = ['International flights', 'Travel insurance', 'Personal expenses and drinks', 'Optional activities and gratuities'].map(item => `<li>${item}</li>`).join('');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+                navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+            }
+        });
+    </script>
+</body>
+</html>
