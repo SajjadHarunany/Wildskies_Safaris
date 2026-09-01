@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/jpeg" href="Images/Wildskies.jpeg">
+    <link rel="icon" type="image/jpeg" href="Images/wildskies_logo.jpeg">
 </head>
 <body class="package-detail">
     <header class="navbar scrolled">
         <div class="container">
-            <a href="index.html" class="logo"><img src="Images/Wildskies.jpeg" alt="Wild Skies Safaris Logo" class="logo-img"></a>
+            <a href="index.html" class="logo"><img src="Images/wildskies_logo.jpeg" alt="Wild Skies Safaris Logo" class="logo-img"></a>
             <div class="nav-menu">
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
@@ -79,22 +79,60 @@
 
     <footer>
         <div class="container footer-grid">
-            <div class="footer-col"><div class="footer-brand"><img src="Images/Wildskies.jpeg" alt="Wild Skies Safaris Logo" class="footer-logo"></div><p>Luxury fly-in safaris and bespoke private journeys across Kenya's most extraordinary wild places.</p></div>
-            <div class="footer-col"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="itineraries.html">Itineraries &amp; Packages</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-            <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact-list"><li><i class="fas fa-phone"></i><a href="tel:+254728223861">+254 728 223861</a></li><li><i class="far fa-envelope"></i><a href="mailto:info@wildskiessafaris.com">info@wildskiessafaris.com</a></li></ul></div>
+            <div class="footer-col footer-brand-col">
+                <div class="footer-brand">
+                    <img src="Images/wildskies_logo.jpeg" alt="Wild Skies Safaris Logo" class="footer-logo">
+                </div>
+                <p>Kenya-based fly-in safari specialists offering bespoke African journeys designed for effortless luxury and authentic wildlife encounters.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="itineraries.html">Itineraries &amp; Packages</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Destinations</h4>
+                <ul class="footer-destinations-list">
+                    <li><a href="masai-mara.html">Masai Mara</a></li>
+                    <li><a href="amboseli.html">Amboseli</a></li>
+                    <li><a href="tsavo.html">Tsavo East/West</a></li>
+                    <li><a href="diani.html">Diani Beach</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact &amp; Legal</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i><span>Nairobi / Mombasa, Kenya</span></li>
+                    <li><i class="fas fa-phone"></i><a href="tel:+254728223861">+254 728 223861</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:info@wildskiessafaris.com">info@wildskiessafaris.com</a></li>
+                </ul>
+                <ul class="footer-legal-list">
+                    <li>© 2026 Wild Skies Safaris</li>
+                    <li><a href="contact.html">Privacy Policy</a> | <a href="contact.html">Terms</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom container"><p>&copy; 2026 Wild Skies Safaris. All Rights Reserved.</p></div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Wild Skies Safaris. All Rights Reserved.</p>
+            <p class="powered-by">Powered by <span>Spaide</span></p>
+        </div>
     </footer>
 
     <script>
         const packages = {
-            'golden-horizon': { category: 'Premium', title: 'Golden Horizon', summary: 'Three immersive nights in the Masai Mara with luxury accommodation and front-row access to iconic wildlife.', route: 'Masai Mara', duration: '3 nights / 4 days', style: 'Luxury fly-in safari', accommodation: 'Selected Mara lodge', bestFor: 'Big Five viewing', days: ['Arrive in the Masai Mara, settle into your lodge and enjoy an afternoon game drive.', 'Set out before breakfast for a full day of wildlife viewing, with time to relax between drives.', 'Enjoy a final morning game drive before transferring to the airstrip for your onward flight.'] },
-            'ivory-plains': { category: 'Premium', title: 'Ivory Plains', summary: 'Three nights in Amboseli, with elephant-rich plains and uninterrupted views of Mount Kilimanjaro.', route: 'Amboseli', duration: '3 nights / 4 days', style: 'Luxury fly-in safari', accommodation: 'Selected Amboseli lodge', bestFor: 'Elephant encounters', days: ['Arrive in Amboseli, check in and take your first afternoon drive beneath Kilimanjaro.', 'Spend a full day exploring the park, with early and late drives timed for wildlife and photography.', 'Enjoy a final morning on the plains before transferring to the airstrip.'] },
-            'seaside-retreat': { category: 'Premium', title: 'Seaside Retreat', summary: 'A seamless journey through the Mara, Amboseli and Diani, from big-game country to barefoot coastal luxury.', route: 'Masai Mara - Amboseli - Diani', duration: '8 nights / 9 days', style: 'Safari and coast escape', accommodation: 'Selected lodges and resort', bestFor: 'Bush-to-beach travel', days: ['Arrive in the Masai Mara and begin with an afternoon game drive.', 'Explore the Mara with early and late drives, then fly onward to Amboseli.', 'Discover Amboseli beneath Kilimanjaro before continuing to Diani Beach.', 'Spend the final days at leisure with optional ocean activities and a relaxed departure.'] },
-            'signature-reserve': { category: 'Luxury', title: 'The Signature Reserve', summary: "Kenya's finest safari and coastal experiences, seamlessly curated into one extraordinary journey.", route: 'Masai Mara - Amboseli - Diani', duration: '11 nights / 12 days', style: 'Signature private journey', accommodation: 'Selected luxury properties', bestFor: 'A complete Kenya escape', days: ['Begin in the Masai Mara with a private transfer, lunch and an afternoon game drive.', 'Spend three full days following wildlife across the Mara at an unhurried pace.', 'Fly to Amboseli for two days of elephant encounters and Kilimanjaro views.', 'Continue to Diani for four nights of beach time, ocean activities and sunset dinners.', 'Transfer to Ukunda for your onward flight home.'] },
-            'migration-window': { category: 'Specialist', title: 'The Migration Window', summary: "Time your Mara and Amboseli journey around Kenya's most dramatic seasonal wildlife moments.", route: 'Masai Mara - Amboseli', duration: '5 nights / 6 days', style: 'Seasonal wildlife safari', accommodation: 'Selected safari lodges', bestFor: 'Migration and photography', days: ['Arrive in the Mara and begin tracking migration herds on an afternoon drive.', 'Focus on migration routes, predators and river country during a full day in the reserve.', 'Enjoy a final Mara drive before flying to Amboseli.', 'Explore Amboseli at sunrise and sunset, with time for wildlife photography.', 'Transfer to the airstrip for your return flight.'] },
-            'honeymoon-escape': { category: 'Specialist', title: 'Honeymoon Escape', summary: 'An intimate Masai Mara and Diani journey designed for couples seeking privacy and unhurried days.', route: 'Masai Mara - Diani', duration: '6 nights / 7 days', style: 'Private safari and beach', accommodation: 'Selected lodge and beach resort', bestFor: 'Couples and honeymoons', days: ['Fly to the Mara, settle into your lodge and enjoy a private afternoon game drive.', 'Spend two days on safari with relaxed mornings, wildlife drives and time together at camp.', 'Fly to Diani and settle into your beachfront retreat.', 'Enjoy two slow days by the ocean with optional snorkeling, spa time or a private dinner.', 'Transfer to Ukunda for your onward flight.'] },
-            'wildlife-focus': { category: 'Specialist', title: 'The Wildlife Focus', summary: 'Extended Mara and Amboseli game viewing for photographers and travelers who want deeper immersion.', route: 'Masai Mara - Amboseli', duration: '7 nights / 8 days', style: 'Extended wildlife safari', accommodation: 'Selected safari lodges', bestFor: 'Photographers and nature lovers', days: ['Fly to the Mara and begin with an afternoon drive.', 'Spend four full days following wildlife, with flexible drives shaped around sightings and light.', 'Fly to Amboseli for two nights among the elephants and open plains.', 'Enjoy a final morning drive before your return flight.'] }
+            'golden-horizon': { category: 'Premium', title: 'Golden Horizon', summary: 'Three immersive nights in the Masai Mara with luxury accommodation and front-row access to iconic wildlife.', route: 'Masai Mara', duration: '3 nights / 4 days', style: 'Luxury fly-in safari', accommodation: 'Selected Mara lodge', bestFor: 'Big Five viewing', days: ['Day 1: Arrive in Nairobi, connect by light aircraft to the Mara and settle into your lodge before an afternoon game drive.', 'Day 2: Begin early with a full morning safari across the Mara plains, then relax at camp before a sunset drive to watch the predators on the hunt.', 'Day 3: Enjoy a full-day wildlife circuit with a bush picnic or lodge lunch, maximizing Big Five and migration sightings while the light is best.', 'Day 4: Take one final sunrise drive, return to the airstrip and depart for Nairobi.'] },
+            'ivory-plains': { category: 'Premium', title: 'Ivory Plains', summary: 'Three nights in Amboseli, with elephant-rich plains and uninterrupted views of Mount Kilimanjaro.', route: 'Amboseli', duration: '3 nights / 4 days', style: 'Luxury fly-in safari', accommodation: 'Selected Amboseli lodge', bestFor: 'Elephant encounters', days: ['Day 1: Arrive in Amboseli, check in and enjoy a gentle afternoon drive beneath the cloud-shadowed mountain.', 'Day 2: Spend a dawn-to-dusk safari exploring open plains, wetlands and elephant corridors with a guide focused on photography and wildlife behavior.', 'Day 3: Visit the park again at golden hour for wide-open plains and a relaxed picnic lunch before basking in camp in the late afternoon.', 'Day 4: Enjoy one final early game drive before the transfer to the airstrip for your onward journey.'] },
+            'seaside-retreat': { category: 'Premium', title: 'Seaside Retreat', summary: 'A seamless journey through the Mara, Amboseli and Diani, from big-game country to barefoot coastal luxury.', route: 'Masai Mara - Amboseli - Diani', duration: '8 nights / 9 days', style: 'Safari and coast escape', accommodation: 'Selected lodges and resort', bestFor: 'Bush-to-beach travel', days: ['Day 1: Arrive in the Mara and enjoy a welcoming afternoon drive before settling into camp.', 'Day 2: Explore the Mara with early and late game drives and time at the lodge in between.', 'Day 3: Continue your wildlife focus with a full safari day, then fly to Amboseli for a new landscape and sunset arrival.', 'Day 4: Discover Amboseli on sunrise and late-afternoon routes, with picnic lunch and open-country viewing.', 'Day 5: Fly onward to Diani and ease into the coast with a relaxed beach afternoon.', 'Day 6: Enjoy a full beach day with snorkeling, spa time or a private coastal lunch.', 'Day 7: Take a slow morning by the ocean before optional water activities and sunset dinner.', 'Day 8: Finish the trip with a final ocean day and flexible downtime before departure.', 'Day 9: Transfer to the airstrip for your onward flight home.'] },
+            'signature-reserve': { category: 'Luxury', title: 'The Signature Reserve', summary: "Kenya's finest safari and coastal experiences, seamlessly curated into one extraordinary journey.", route: 'Masai Mara - Amboseli - Diani', duration: '11 nights / 12 days', style: 'Signature private journey', accommodation: 'Selected luxury properties', bestFor: 'A complete Kenya escape', days: ['Day 1: Arrive in the Masai Mara and ease into the trip with lunch and an afternoon game drive.', 'Day 2: Morning tracking followed by a relaxed afternoon at camp and a sunset drive.', 'Day 3: Focus on predator and migration movement across the reserve with a full-day safari.', 'Day 4: Enjoy a slower rhythm with private guiding, lodge time and a final great drive.', 'Day 5: Fly to Amboseli for five days of elephant viewing and mountain scenery, with flexible daily routes.', 'Day 6: Explore the park at dawn and dusk for the best light and highest wildlife activity.', 'Day 7: Continue through Amboseli with a full-day route and a relaxed evening at camp.', 'Day 8: Fly to Diani and begin with a gentle beach-side recovery afternoon.', 'Day 9: Enjoy a full coastal day with water activities or beachside downtime.', 'Day 10: Take a second unhurried beach day for couples, families or photographers.', 'Day 11: Meander through the coast before a sunset dinner by the sea.', 'Day 12: Transfer to the airport for onward departure.'] },
+            'migration-window': { category: 'Specialist', title: 'The Migration Window', summary: "Time your Mara and Amboseli journey around Kenya's most dramatic seasonal wildlife moments.", route: 'Masai Mara - Amboseli', duration: '5 nights / 6 days', style: 'Seasonal wildlife safari', accommodation: 'Selected safari lodges', bestFor: 'Migration and photography', days: ['Day 1: Arrive in the Mara and settle in before a late-afternoon drive along migration routes.', 'Day 2: Spend a full day tracking herd movements, river edges and predator activity across the reserve.', 'Day 3: Take a dawn drive with photography stops before a return to camp for a restful afternoon.', 'Day 4: Fly to Amboseli for a changed landscape and a golden-hour arrival drive.', 'Day 5: Explore the park at sunrise and sunset for elephants, birds and wide-open vistas.', 'Day 6: Enjoy a final early game drive before connecting onward from the airstrip.'] },
+            'honeymoon-escape': { category: 'Specialist', title: 'Honeymoon Escape', summary: 'An intimate Masai Mara and Diani journey designed for couples seeking privacy and unhurried days.', route: 'Masai Mara - Diani', duration: '6 nights / 7 days', style: 'Private safari and beach', accommodation: 'Selected lodge and beach resort', bestFor: 'Couples and honeymoons', days: ['Day 1: Arrive in the Mara and enjoy a private afternoon game drive tailored to your pace.', 'Day 2: Spend a relaxed sunrise and sunset safari day, with afternoon time together at camp.', 'Day 3: Take a final full-day safari, then fly onward to Diani for a beach arrival.', 'Day 4: Settle into your coastal retreat and enjoy an easy oceanfront afternoon.', 'Day 5: Enjoy a slow beach day with optional snorkeling, spa time or private dining.', 'Day 6: Keep the rhythm easy with another secluded coastal day and sunset celebration.', 'Day 7: Depart after a final relaxed morning by the shore.'] },
+            'wildlife-focus': { category: 'Specialist', title: 'The Wildlife Focus', summary: 'Extended Mara and Amboseli game viewing for photographers and travelers who want deeper immersion.', route: 'Masai Mara - Amboseli', duration: '7 nights / 8 days', style: 'Extended wildlife safari', accommodation: 'Selected safari lodges', bestFor: 'Photographers and nature lovers', days: ['Day 1: Arrival in the Mara with lunch and a first safari drive across the reserve.', 'Day 2: Start early for a predator-focused route and enjoy an unhurried afternoon at the lodge.', 'Day 3: Spend a full day tracking wildlife and habitats with flexible timing around sightings and light.', 'Day 4: Continue the Mara rhythm with another dawn and sunset drive for the best photography windows.', 'Day 5: Fly to Amboseli and settle in before a gentle afternoon drive.', 'Day 6: Spend a full day in Amboseli, following herds and scenic highland views.', 'Day 7: Take one more sunrise route and enjoy the open plains before a final evening at camp.', 'Day 8: Transfer to the airstrip and fly onward.'] }
         };
 
         const selected = packages[new URLSearchParams(window.location.search).get('package')] || packages['golden-horizon'];
@@ -130,3 +168,4 @@
     </script>
 </body>
 </html>
+

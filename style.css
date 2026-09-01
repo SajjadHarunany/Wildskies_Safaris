@@ -1,4 +1,4 @@
-/* =========================================
+﻿/* =========================================
    1. GLOBAL VARIABLES & RESET
    ========================================= */
 :root {
@@ -33,6 +33,16 @@ body {
     color: var(--text);
     line-height: 1.6;
     background-color: var(--white);
+}
+
+a {
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
 }
 
 .container {
@@ -229,7 +239,7 @@ body {
     color: var(--white);
     padding-top: 150px; /* Increased offset for taller initial navbar on homepage */
     box-sizing: border-box; /* Include padding in height calculation */
-    background-image: url('Images/lion9.jpeg'); /* Default for desktop/tablet */
+    background-image: url('Images/safari_lion_hero.jpeg'); /* Default for desktop/tablet */
     background-size: cover;
     background-position: center;
 }
@@ -306,7 +316,7 @@ body {
     justify-content: center;
     color: var(--dark);
     background-color: #eadcc2;
-    background-image: url('Images/lion9.jpeg');
+    background-image: url('Images/safari_lion_hero.jpeg');
     background-size: cover;
     background-position: center;
     padding-top: 90px; /* Offset for fixed navbar */
@@ -335,12 +345,12 @@ body {
     display: none;
 }
 
-.page-hero-about { background-image: url('Images/leopard1.jpeg'); }
-.page-hero-blog { background-image: url('Images/lion3.jpeg'); }
-.page-hero-contact { background-image: url('Images/leopard5.jpeg'); }
-.page-hero-destinations { background-image: url('Images/elephant1.jpeg'); }
-.page-hero-itineraries { background-image: url('Images/lion6.jpeg'); }
-.page-hero-package { background-image: url('Images/leopard3.jpeg'); }
+.page-hero-about { background-image: url('Images/lion_pride_front_view.jpeg'); }
+.page-hero-blog { background-image: url('Images/lion_pride_evening.jpeg'); }
+.page-hero-contact { background-image: url('Images/leopard_closeup.jpeg'); }
+.page-hero-destinations { background-image: url('Images/amboseli_elephants_kilimanjaro.jpeg'); }
+.page-hero-itineraries { background-image: url('Images/flight_airstrip_scene.jpeg'); }
+.page-hero-package { background-image: url('Images/lion_male_portrait.jpeg'); }
 
 .page-hero .hero-content {
     z-index: 2;
@@ -401,7 +411,7 @@ body {
     font-weight: 500;
 }
 
-.page-hero-itineraries { background-image: url('Images/elephant1.jpeg'); }
+.page-hero-itineraries { background-image: url('Images/flight_airstrip_scene.jpeg'); }
 
 .package-page-intro {
     max-width: 880px;
@@ -536,13 +546,17 @@ body {
 .card-link {
     text-decoration: none;
     color: var(--primary);
-    font-weight: bold;
+    font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
 }
 .card-link:hover {
     color: var(--primary-hover);
+    transform: translateX(3px);
+    text-decoration: underline;
 }
 
 .card-tag {
@@ -810,14 +824,18 @@ footer {
 
 .footer-grid {
     display: grid;
-    gap: 3rem;
+    gap: 2rem 2.5rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     margin-bottom: 2rem;
 }
 
 @media(min-width: 768px) {
-    .footer-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media(min-width: 1024px) {
+    .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.3fr; }
 }
 
 .footer-col h4 {
@@ -843,12 +861,13 @@ footer {
 .footer-contact-list a {
     color: rgba(255,255,255,0.7);
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .footer-links a:hover,
 .footer-contact-list a:hover {
     color: var(--primary);
+    text-decoration: underline;
 }
 
 .footer-links a:hover {
@@ -868,6 +887,54 @@ footer {
 
 .footer-brand {
     margin-bottom: 1rem;
+}
+
+.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-destinations-list {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.footer-destinations-list li,
+.footer-contact-list li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-legal-list {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+}
+
+.footer-legal-list li {
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.powered-by {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+.powered-by span {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 /* Floating WhatsApp Button */
@@ -939,7 +1006,7 @@ footer {
     overflow: hidden;
     border-radius: var(--border-radius);
     background-size: cover;
-    background-position: center;
+    background-position: center 55%;
     box-shadow: 0 18px 45px rgba(0,0,0,0.16);
 }
 
@@ -951,7 +1018,7 @@ footer {
 }
 
 .beach-card {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+    background-image: url('Images/diani_beach_scene.jpeg');
 }
 
 .destination-card-content {
@@ -1001,10 +1068,18 @@ footer {
 .light-link {
     color: var(--white);
     margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .light-link:hover {
     color: var(--primary);
+    transform: translateX(3px);
+    text-decoration: underline;
 }
 
 .itinerary-grid {
@@ -1180,8 +1255,8 @@ footer {
     margin-bottom: 0.55rem;
 }
 
-.legacy-itinerary {
-    display: none;
+.itinerary-detailed {
+    display: block;
 }
 
 .lodge-directory {
@@ -1353,7 +1428,7 @@ footer {
     color: var(--white);
     background:
         linear-gradient(90deg, rgba(0,0,0,0.86), rgba(0,0,0,0.56)),
-        url('Images/lion6.jpeg') center/cover;
+        url('Images/mara_lion_pride_2.jpeg') center/cover;
 }
 
 .inquiry-layout {
@@ -1379,9 +1454,10 @@ footer {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 2rem;
+    max-width: 420px;
 }
 
 .contact-grid div {
@@ -1420,6 +1496,11 @@ footer {
     background-color: var(--white);
     border-radius: var(--border-radius);
     box-shadow: 0 20px 55px rgba(0,0,0,0.25);
+}
+
+.contact-page-form {
+    margin-top: 1.5rem;
+    max-width: 100%;
 }
 
 .inquiry-form p {
@@ -1654,7 +1735,7 @@ footer {
 }
 
 .day-entry li::before {
-    content: "•";
+    content: "â€¢";
     position: absolute;
     left: 0;
     color: var(--primary);
@@ -1731,7 +1812,7 @@ footer {
 }
 
 .coverage-col.includes li::before {
-    content: "✓";
+    content: "âœ“";
     position: absolute;
     left: 0;
     color: #27ae60;
@@ -1739,7 +1820,7 @@ footer {
 }
 
 .coverage-col.excludes li::before {
-    content: "✗";
+    content: "âœ—";
     position: absolute;
     left: 0;
     color: #e74c3c;
@@ -1806,7 +1887,7 @@ footer {
 }
 
 .booking-notes li::before {
-    content: "•";
+    content: "â€¢";
     position: absolute;
     left: 0;
     color: var(--primary);
@@ -2219,7 +2300,7 @@ footer {
 
 @media (max-width: 480px) {
     .hero {
-        background-image: url('Images/lion8.jpeg'); /* Specific image for phones */
+        background-image: url('Images/tsavo_wildlife_road.jpeg'); /* Specific image for phones */
     }
 
     .hero-content h1 { font-size: 2.2rem; }
@@ -2253,3 +2334,4 @@ footer {
         width: fit-content;
     }
 }
+
