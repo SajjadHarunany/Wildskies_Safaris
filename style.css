@@ -78,13 +78,16 @@ a:hover {
    2. NAVIGATION BAR
    ========================================= */
 .navbar {
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
     padding: 0.5rem 0;
     position: fixed; /* Changed from sticky to fixed for overlay effect */
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .navbar .container {
@@ -97,8 +100,9 @@ a:hover {
 }
 
 .navbar.scrolled {
-    background-color: var(--white);
+    background-color: rgba(255,255,255,0.96);
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-bottom-color: rgba(17,17,17,0.06);
 }
 .navbar.scrolled .logo, .navbar.scrolled .nav-links a {
     color: var(--dark);
@@ -311,6 +315,7 @@ a:hover {
 .page-hero {
     position: relative;
     height: 42vh;
+    min-height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,57 +324,81 @@ a:hover {
     background-image: url('Images/safari_lion_hero.jpeg');
     background-size: cover;
     background-position: center;
-    padding-top: 90px; /* Offset for fixed navbar */
+    background-repeat: no-repeat;
+    padding-top: 90px;
     overflow: hidden;
+    isolation: isolate;
+    background-attachment: scroll;
+}
+
+@media (min-width: 1200px) {
+    .page-hero {
+        background-size: 120% auto;
+        background-position: center 50%;
+    }
 }
 
 .page-hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(24,31,27,0.4) 0%, rgba(24,31,27,0.2) 48%, rgba(24,31,27,0.08) 100%);
+    background: linear-gradient(90deg, rgba(24,31,27,0.32) 0%, rgba(24,31,27,0.14) 52%, rgba(24,31,27,0.08) 100%);
+    z-index: 0;
 }
 
 .page-hero::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 28%;
-    background: rgba(238,230,211,0.68);
-    clip-path: polygon(0 55%, 38% 0, 100% 32%, 100% 100%, 0 100%);
+    display: none;
 }
 
 .page-hero .hero-overlay {
     display: none;
 }
 
-.page-hero-about { background-image: url('Images/lion_pride_front_view.jpeg'); }
-.page-hero-blog { background-image: url('Images/lion_pride_evening.jpeg'); }
-.page-hero-contact { background-image: url('Images/leopard_closeup.jpeg'); }
-.page-hero-destinations { background-image: url('Images/amboseli_elephants_kilimanjaro.jpeg'); }
-.page-hero-itineraries { background-image: url('Images/flight_airstrip_scene.jpeg'); }
-.page-hero-package { background-image: url('Images/lion_male_portrait.jpeg'); }
+.page-hero-about { background-image: url('Images/lion_closeup_profile.jpeg'); background-position: center center; }
+.page-hero-blog { background-image: url('Images/lioness_wildlife_closeup.jpeg'); background-position: center center; }
+.page-hero-contact { background-image: url('Images/leopard_closeup.jpeg'); background-position: center center; }
+.page-hero-destinations { background-image: url('Images/lion_safari_approach.jpeg'); background-position: center center; }
+.page-hero-itineraries { background-image: url('Images/lion_male_portrait.jpeg'); background-position: center center; }
+.page-hero-package { background-image: url('Images/lion_male_portrait.jpeg'); background-position: center center; }
+.page-hero-mara { background-image: url('Images/masai_mara_lion_hero.jpeg'); background-position: center center; }
+.page-hero-amboseli { background-image: url('Images/amboseli_elephant_herd.jpeg'); background-position: center center; }
+.page-hero-tsavo { background-image: url('Images/tsavo_lion_scene.jpeg'); background-position: center center; }
+.page-hero-diani { background-image: url('Images/diani_coastal_retreat.jpeg'); background-position: center center; }
 
 .page-hero .hero-content {
-    z-index: 2;
+    position: relative;
+    z-index: 1;
     max-width: 760px;
     margin-top: 1rem;
-    padding: 1.1rem 1.75rem;
+    padding: 1.1rem 1.4rem;
     text-align: left;
-    background: rgba(250,247,239,0.8);
-    border: 1px solid rgba(255,255,255,0.72);
-    border-radius: 14px;
-    box-shadow: 0 14px 35px rgba(27,32,25,0.14);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(9,12,11,0.12);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     animation: hero-content-in 0.7s ease-out both;
 }
 
+.page-hero-destinations .hero-content {
+    width: min(100%, 980px);
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.4rem 1.8rem 1.8rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 26px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 .page-hero-about .hero-content,
-.page-hero-blog .hero-content {
-    border-radius: 24px;
+.page-hero-blog .hero-content,
+.page-hero-contact .hero-content,
+.page-hero-destinations .hero-content,
+.page-hero-itineraries .hero-content {
+    border-radius: 22px;
 }
 
 .page-hero {
@@ -393,20 +422,21 @@ a:hover {
     height: 4px;
     margin-bottom: 1.25rem;
     background: var(--primary);
+    border-radius: 999px;
 }
 
 .page-hero .hero-content h1 {
-    color: var(--dark);
+    color: var(--white);
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 3.8vw, 3.25rem);
     line-height: 1.05;
-    text-shadow: none;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.38);
 }
 
 .page-hero .hero-content p {
     max-width: 580px;
     margin-top: 1rem;
-    color: #3f433d;
+    color: rgba(255,255,255,0.9);
     font-size: 0.92rem;
     font-weight: 500;
 }
@@ -416,6 +446,12 @@ a:hover {
 .package-page-intro {
     max-width: 880px;
     margin-bottom: 4rem;
+}
+
+.page-hero .hero-content .serif-title,
+.page-hero .hero-content h1,
+.page-hero .hero-content p {
+    text-shadow: 0 2px 15px rgba(0,0,0,0.32);
 }
 
 .package-page-intro .section-title {
@@ -443,6 +479,18 @@ a:hover {
 @media(min-width: 768px) {
     .hero-content .hero-brand { font-size: 1.35rem; }
     .hero-content p { font-size: 1.05rem; }
+    .page-hero {
+        height: 52vh;
+        min-height: 430px;
+        max-height: 560px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .page-hero {
+        background-size: cover;
+        background-position: center center;
+    }
 }
 
 /* =========================================
@@ -709,11 +757,16 @@ a:hover {
    ========================================= */
 .contact-layout {
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
+    align-items: start;
+    grid-template-columns: 1fr;
 }
 
-@media(min-width: 992px) {
-    .contact-layout { grid-template-columns: 2fr 1fr; }
+.contact-cards-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
 }
 
 .details-box {
@@ -738,25 +791,28 @@ a:hover {
 .mt-2 { margin-top: 2rem; }
 
 /* Styles for Full Contact Page */
+.contact-info-panel {
+    background: linear-gradient(180deg, #fffdf9 0%, #f7f2e6 100%);
+    border: 1px solid #efe4d0;
+    border-radius: 22px;
+    padding: 2rem;
+    box-shadow: 0 12px 35px rgba(27, 20, 10, 0.08);
+}
+
 .contact-info-panel h2 {
     color: var(--dark);
     margin-bottom: 0.5rem;
 }
 
 .contact-subtitle {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     font-size: 1rem;
     max-width: 95%;
 }
 
-.contact-cards-grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
 .contact-card {
     background-color: var(--white);
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: var(--border-radius);
     border: 1px solid #f0f0f0;
     border-left-width: 4px;
@@ -771,21 +827,23 @@ a:hover {
 .contact-card h3 {
     color: var(--dark);
     margin-bottom: 0.5rem;
+    font-size: 1.05rem;
 }
 
 .contact-card p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
 .contact-card-icon {
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.9rem;
     color: var(--white);
 }
 
@@ -808,9 +866,35 @@ a:hover {
 .btn-outline { background-color: transparent; color: var(--primary); border: 2px solid var(--primary); }
 .btn-outline:hover { background-color: var(--primary); color: var(--white); }
 
-.contact-details-panel .details-box { background-color: var(--light); }
-.contact-details-panel h3 { color: var(--dark); margin-bottom: 1rem; }
+.contact-details-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
 
+.contact-details-panel .details-box {
+    background: linear-gradient(180deg, #fffaf1 0%, #f7f3eb 100%);
+    border: 1px solid #e6dac2;
+}
+
+.contact-details-panel h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.contact-page-form {
+    margin-top: 0;
+    max-width: 100%;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid #eadfc6;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(40, 34, 23, 0.08);
+}
+
+.contact-page-form p {
+    margin-bottom: 0.9rem;
+}
 /* =========================================
    9. FOOTER & FLOATING ACTIONS
    ========================================= */
@@ -1275,6 +1359,47 @@ footer {
     gap: 1.25rem;
 }
 
+.destination-detail-page .container {
+    max-width: 1180px;
+}
+
+.destination-detail-page .container > h3 {
+    margin-top: 2.1rem;
+    margin-bottom: 0.8rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ece6dc;
+    color: var(--dark);
+    font-size: 1.3rem;
+}
+
+.destination-detail-page .container > ul {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 1.1rem 1.25rem;
+    background: #fffaf0;
+    border: 1px solid #f2e5c9;
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+}
+
+.destination-detail-page .container > ul li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.destination-detail-page .container > ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.destination-detail-page .container > a.btn {
+    margin-top: 0.5rem;
+}
+
 .lodge-card {
     overflow: hidden;
     background-color: var(--white);
@@ -1418,10 +1543,40 @@ footer {
 
 .blog-preview article {
     padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .blog-preview h3 {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.blog-article {
+    margin-top: 2rem;
+    background: #fffdf8;
+    border: 1px solid #efe4d0;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(31, 22, 8, 0.05);
+}
+
+.blog-article h3 {
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+}
+
+.blog-article p {
+    margin-bottom: 1rem;
+}
+
+.blog-article ul {
+    margin: 1rem 0 1.2rem 1.1rem;
+    color: var(--text);
+}
+
+.blog-article li {
+    margin-bottom: 0.5rem;
 }
 
 .inquiry-section {
@@ -1735,7 +1890,7 @@ footer {
 }
 
 .day-entry li::before {
-    content: "â€¢";
+    content: "•";
     position: absolute;
     left: 0;
     color: var(--primary);
@@ -1812,7 +1967,7 @@ footer {
 }
 
 .coverage-col.includes li::before {
-    content: "âœ“";
+    content: "✔";
     position: absolute;
     left: 0;
     color: #27ae60;
@@ -1820,7 +1975,7 @@ footer {
 }
 
 .coverage-col.excludes li::before {
-    content: "âœ—";
+    content: "✖";
     position: absolute;
     left: 0;
     color: #e74c3c;
@@ -1887,7 +2042,7 @@ footer {
 }
 
 .booking-notes li::before {
-    content: "â€¢";
+    content: "•";
     position: absolute;
     left: 0;
     color: var(--primary);
