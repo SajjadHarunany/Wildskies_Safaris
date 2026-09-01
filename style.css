@@ -100,7 +100,7 @@ a:hover {
 }
 
 .navbar.scrolled {
-    background-color: rgba(255,255,255,0.96);
+    background-color: rgba(255, 255, 255, 0.871);
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border-bottom-color: rgba(17,17,17,0.06);
 }
@@ -155,6 +155,17 @@ a:hover {
 .navbar.scrolled .nav-links a:hover,
 .navbar.scrolled .nav-links a.active {
     color: var(--primary);
+}
+
+body.inner-page .navbar:not(.scrolled) {
+    background-color: rgba(17, 17, 17, 0.20);
+    border-bottom-color: rgba(255,255,255,0.12);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+body.inner-page .navbar:not(.scrolled) .logo-img {
+    max-height: 58px;
 }
 
 .nav-menu {
@@ -314,16 +325,16 @@ a:hover {
 /* Inner Page Hero */
 .page-hero {
     position: relative;
-    height: 42vh;
-    min-height: 360px;
+    height: 58vh;
+    min-height: 470px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--dark);
-    background-color: #eadcc2;
+    background-color: #1b1d18;
     background-image: url('Images/safari_lion_hero.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     padding-top: 90px;
     overflow: hidden;
@@ -333,8 +344,8 @@ a:hover {
 
 @media (min-width: 1200px) {
     .page-hero {
-        background-size: 120% auto;
-        background-position: center 50%;
+        height: 64vh;
+        min-height: 560px;
     }
 }
 
@@ -342,7 +353,7 @@ a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(24,31,27,0.32) 0%, rgba(24,31,27,0.14) 52%, rgba(24,31,27,0.08) 100%);
+    background: linear-gradient(90deg, rgba(9,12,10,0.40) 0%, rgba(9,12,10,0.14) 52%, rgba(9,12,10,0.05) 100%);
     z-index: 0;
 }
 
@@ -354,30 +365,30 @@ a:hover {
     display: none;
 }
 
-.page-hero-about { background-image: url('Images/lion_closeup_profile.jpeg'); background-position: center center; }
-.page-hero-blog { background-image: url('Images/lioness_wildlife_closeup.jpeg'); background-position: center center; }
-.page-hero-contact { background-image: url('Images/leopard_closeup.jpeg'); background-position: center center; }
-.page-hero-destinations { background-image: url('Images/lion_safari_approach.jpeg'); background-position: center center; }
-.page-hero-itineraries { background-image: url('Images/lion_male_portrait.jpeg'); background-position: center center; }
-.page-hero-package { background-image: url('Images/lion_male_portrait.jpeg'); background-position: center center; }
-.page-hero-mara { background-image: url('Images/masai_mara_lion_hero.jpeg'); background-position: center center; }
-.page-hero-amboseli { background-image: url('Images/amboseli_elephant_herd.jpeg'); background-position: center center; }
-.page-hero-tsavo { background-image: url('Images/tsavo_lion_scene.jpeg'); background-position: center center; }
-.page-hero-diani { background-image: url('Images/diani_coastal_retreat.jpeg'); background-position: center center; }
+.page-hero-about { background-image: url('Images/lion_closeup_profile.jpeg'); background-position: center 44%; }
+.page-hero-blog { background-image: url('Images/lioness_wildlife_closeup.jpeg'); background-position: center 44%; }
+.page-hero-contact { background-image: url('revamp images/raww.jpeg'); background-position: center 45%; }
+.page-hero-destinations { background-image: url('Images/lion_safari_approach.jpeg'); background-position: center 46%; }
+.page-hero-itineraries { background-image: url('Images/lion_male_portrait.jpeg'); background-position: center 42%; }
+.page-hero-package { background-image: url('Images/lion_male_portrait.jpeg'); background-position: center 42%; }
+.page-hero-mara { background-image: url('Images/masai_mara_lion_hero.jpeg'); background-position: center 48%; }
+.page-hero-amboseli { background-image: url('Images/amboseli_elephant_herd.jpeg'); background-position: center 43%; }
+.page-hero-tsavo { background-image: url('Images/tsavo_lion_scene.jpeg'); background-position: center 50%; }
+.page-hero-diani { background-image: url('Images/diani_coastal_retreat.jpeg'); background-position: center 44%; }
 
 .page-hero .hero-content {
     position: relative;
     z-index: 1;
     max-width: 760px;
     margin-top: 1rem;
-    padding: 1.1rem 1.4rem;
+    padding: 1rem 1.25rem;
     text-align: left;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(9,12,11,0.12);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    box-shadow: 0 10px 26px rgba(9,12,11,0.08);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     animation: hero-content-in 0.7s ease-out both;
 }
 
@@ -385,12 +396,12 @@ a:hover {
     width: min(100%, 980px);
     max-width: 980px;
     margin: 0 auto;
-    padding: 1.4rem 1.8rem 1.8rem;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.22);
-    border-radius: 26px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    padding: 1.15rem 1.45rem 1.45rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 14px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .page-hero-about .hero-content,
@@ -398,11 +409,11 @@ a:hover {
 .page-hero-contact .hero-content,
 .page-hero-destinations .hero-content,
 .page-hero-itineraries .hero-content {
-    border-radius: 22px;
+    border-radius: 14px;
 }
 
 .page-hero {
-    animation: hero-image-drift 12s ease-in-out infinite alternate;
+    animation: none;
 }
 
 @keyframes hero-content-in {
@@ -411,8 +422,8 @@ a:hover {
 }
 
 @keyframes hero-image-drift {
-    from { background-position: 48% center; }
-    to { background-position: 52% center; }
+    from { background-position: center center; }
+    to { background-position: center center; }
 }
 
 .page-hero .hero-content::before {
@@ -430,13 +441,13 @@ a:hover {
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 3.8vw, 3.25rem);
     line-height: 1.05;
-    text-shadow: 0 2px 18px rgba(0,0,0,0.38);
+    text-shadow: 0 3px 22px rgba(0,0,0,0.62);
 }
 
 .page-hero .hero-content p {
     max-width: 580px;
     margin-top: 1rem;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.94);
     font-size: 0.92rem;
     font-weight: 500;
 }
@@ -451,7 +462,7 @@ a:hover {
 .page-hero .hero-content .serif-title,
 .page-hero .hero-content h1,
 .page-hero .hero-content p {
-    text-shadow: 0 2px 15px rgba(0,0,0,0.32);
+    text-shadow: 0 3px 22px rgba(0,0,0,0.62);
 }
 
 .package-page-intro .section-title {
@@ -480,16 +491,15 @@ a:hover {
     .hero-content .hero-brand { font-size: 1.35rem; }
     .hero-content p { font-size: 1.05rem; }
     .page-hero {
-        height: 52vh;
-        min-height: 430px;
-        max-height: 560px;
+        height: 60vh;
+        min-height: 500px;
+        max-height: 720px;
     }
 }
 
 @media(min-width: 1200px) {
     .page-hero {
         background-size: cover;
-        background-position: center center;
     }
 }
 
@@ -553,8 +563,15 @@ a:hover {
 
 .rounded-img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.about-image .rounded-img {
+    aspect-ratio: 4 / 5;
+    object-position: center top;
 }
 
 /* Cards (Destinations) */
@@ -1084,13 +1101,13 @@ footer {
 
 .destination-card {
     position: relative;
-    min-height: 520px;
+    min-height: 600px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
     border-radius: var(--border-radius);
     background-size: cover;
-    background-position: center 55%;
+    background-position: center center;
     box-shadow: 0 18px 45px rgba(0,0,0,0.16);
 }
 
@@ -1098,7 +1115,7 @@ footer {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.86), rgba(0,0,0,0.25) 62%, rgba(0,0,0,0.08));
+    background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.18) 58%, rgba(0,0,0,0.02));
 }
 
 .beach-card {
@@ -1110,6 +1127,7 @@ footer {
     z-index: 1;
     color: var(--white);
     padding: 2rem;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.48);
 }
 
 .destination-card h3,
@@ -1305,6 +1323,18 @@ footer {
     margin-top: 1rem;
 }
 
+.package-detail .package-panel .btn-ghost {
+    color: var(--primary);
+    border-color: rgba(245,166,35,0.8);
+    background-color: rgba(245,166,35,0.08);
+    backdrop-filter: none;
+}
+
+.package-detail .package-panel .btn-ghost:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
 .day-list {
     display: grid;
     gap: 1rem;
@@ -1355,7 +1385,7 @@ footer {
 
 .lodge-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
 }
 
@@ -1411,8 +1441,9 @@ footer {
 .lodge-card img {
     display: block;
     width: 100%;
-    height: 170px;
+    height: clamp(220px, 22vw, 300px);
     object-fit: cover;
+    object-position: center;
 }
 
 .lodge-card div {
@@ -1433,7 +1464,7 @@ footer {
 .itinerary-card,
 .advantage-card,
 .blog-preview article {
-    background-color: var(--white);
+    background-color: rgba(255,255,255,0.94);
     border-radius: var(--border-radius);
     border: 1px solid #ece6dc;
     box-shadow: 0 10px 28px rgba(0,0,0,0.05);
@@ -1524,6 +1555,7 @@ footer {
 }
 
 .about-teaser .rounded-img {
+    aspect-ratio: 4 / 3;
     box-shadow: 0 20px 55px rgba(0,0,0,0.35);
 }
 
@@ -1582,7 +1614,7 @@ footer {
 .inquiry-section {
     color: var(--white);
     background:
-        linear-gradient(90deg, rgba(0,0,0,0.86), rgba(0,0,0,0.56)),
+        linear-gradient(90deg, rgba(0,0,0,0.70), rgba(0,0,0,0.38)),
         url('Images/mara_lion_pride_2.jpeg') center/cover;
 }
 
@@ -1619,7 +1651,7 @@ footer {
     padding: 1.2rem;
     border: 1px solid rgba(255,255,255,0.18);
     border-radius: var(--border-radius);
-    background-color: rgba(255,255,255,0.08);
+    background-color: rgba(255,255,255,0.05);
 }
 
 .contact-grid span {
@@ -1648,7 +1680,7 @@ footer {
     gap: 0.7rem;
     padding: 1.6rem;
     color: var(--dark);
-    background-color: var(--white);
+    background-color: rgba(255,255,255,0.94);
     border-radius: var(--border-radius);
     box-shadow: 0 20px 55px rgba(0,0,0,0.25);
 }
@@ -1678,7 +1710,7 @@ footer {
     padding: 0.8rem 0.9rem;
     color: var(--dark);
     font: inherit;
-    background-color: #fffdf8;
+    background-color: rgba(255,253,248,0.92);
 }
 
 .inquiry-form textarea {
@@ -2213,7 +2245,11 @@ footer {
     }
 
     .destination-card {
-        min-height: 460px;
+        min-height: 560px;
+    }
+
+    .lodge-card img {
+        height: 260px;
     }
 
     .inquiry-copy h2 {
@@ -2463,7 +2499,7 @@ footer {
     .hero-content .hero-brand { font-size: 1.15rem; }
     .hero-content .hero-tagline { font-size: 0.78rem; letter-spacing: 2px; }
     .hero-cta .btn { width: 100%; justify-content: center; }
-    .destination-card { min-height: 540px; }
+    .destination-card { min-height: 560px; }
     .destination-card-content,
     .itinerary-card,
     .blog-preview article,
