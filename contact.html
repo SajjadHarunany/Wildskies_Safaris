@@ -12,6 +12,8 @@
 </head>
 <body class="inner-page">
 
+    <div id="formToast" class="form-toast" role="status" aria-live="polite"></div>
+
     <!-- Navigation Header -->
     <header class="navbar">
         <div class="container">
@@ -92,7 +94,11 @@
             </div>
 
             <div class="contact-form-panel">
-                <form class="inquiry-form contact-page-form" action="mailto:info@wildskiessafaris.com" method="post" enctype="text/plain">
+                <form id="contactForm" class="inquiry-form contact-page-form" action="https://formsubmit.co/ajax/info@wildskiessafaris.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Safari Inquiry - Wild Skies Safaris">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <p>Share a few details and we will begin designing your custom safari.</p>
                     <label for="name">Name</label>
                     <input type="text" id="name" name="Name" required>
@@ -190,6 +196,44 @@
                 navToggle.addEventListener('click', () => {
                     navMenu.classList.toggle('active');
                     navToggle.classList.toggle('active');
+                });
+            }
+
+            // Submit the inquiry form in the background and show a top banner instead of navigating away
+            const contactForm = document.getElementById('contactForm');
+            const toast = document.getElementById('formToast');
+            let toastTimer;
+
+            const showToast = (message, isError) => {
+                toast.textContent = message;
+                toast.classList.toggle('form-toast-error', !!isError);
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 6000);
+            };
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalLabel = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            headers: { Accept: 'application/json' },
+                            body: new FormData(contactForm)
+                        });
+                        if (!response.ok) throw new Error('Request failed');
+                        showToast("Thank you! Your inquiry has been sent. We'll be in touch shortly.", false);
+                        contactForm.reset();
+                    } catch (err) {
+                        showToast('Something went wrong sending your inquiry. Please try WhatsApp or email us directly.', true);
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalLabel;
+                    }
                 });
             }
         });
