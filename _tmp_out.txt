@@ -1,0 +1,2 @@
+﻿assets\og-image.jpg | MISSING
+assets\favicon.svg | exists | 1KB

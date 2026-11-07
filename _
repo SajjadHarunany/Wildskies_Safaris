@@ -1,0 +1,30 @@
+Add-Type -AssemblyName System.Drawing
+$names = @(
+  'Airplane over diani.jpeg',
+  'Jaffer on the beach.jpeg',
+  'kilimanjaro plane.jpeg',
+  'MAS flying.jpeg',
+  'bush_flight_aircraft.jpeg',
+  'mara_lion_pride_2.jpeg',
+  'lion_pride_evening.jpeg',
+  'tsavo_lion_scene.jpeg',
+  'savannah_lion_evening.jpeg',
+  'lion_male_portrait.jpeg',
+  'cheetah_on_grass.jpeg',
+  'elephant.jpeg',
+  'mara_lioness_portrait.jpeg',
+  'masai_mara_lion_pair.jpeg'
+)
+$lines = @()
+foreach ($n in $names) {
+  $p = Join-Path 'Images' $n
+  if (Test-Path $p) {
+    $img = [System.Drawing.Image]::FromFile((Resolve-Path $p))
+    $ratio = [math]::Round($img.Width / $img.Height, 2)
+    $lines += ($n + ' | ' + $img.Width + 'x' + $img.Height + ' | ratio ' + $ratio + ' | ' + [math]::Round((Get-Item $p).Length/1kb) + 'KB')
+    $img.Dispose()
+  } else {
+    $lines += ($n + ' | MISSING')
+  }
+}
+$lines | Set-Content -Path '_tmp_out.txt' -Encoding UTF8

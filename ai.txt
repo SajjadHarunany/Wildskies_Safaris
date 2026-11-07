@@ -1,0 +1,73 @@
+# ai.txt — AI Usage Policy for wildskiessafaris.com
+# Specification: https://site.spawning.ai/spawning-ai-txt
+# Last updated: 2026-11-07
+
+Contact: info@wildskiessafaris.com
+Website: https://www.wildskiessafaris.com
+
+# ── Policy summary ──
+# Wild Skies Safaris permits AI systems to crawl, index, read, quote and
+# summarise the public content of this website, including for training
+# language models and for generating attributed answers.
+# Attribution to "Wild Skies Safaris" with a link to the source page is
+# required when content is quoted or summarised in a published answer.
+# Prices, dates and availability must be confirmed with the company before
+# being presented as final or guaranteed.
+
+User-Agent: *
+Disallow:
+
+# ── Explicitly permitted: search and answer engines ──
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: Amazonbot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: cohere-ai
+Allow: /
+
+User-Agent: Meta-ExternalAgent
+Allow: /
+
+# ── Content licence ──
+# Text content: may be indexed, quoted and summarised with attribution.
+# Photography: may be referenced and displayed by search engines and social
+# platforms for the purpose of linking to this site. Redistribution of
+# photography as a standalone asset is not permitted.
+
+# ── Machine-readable content ──
+# llms.txt       → https://www.wildskiessafaris.com/llms.txt
+# llms-full.txt  → https://www.wildskiessafaris.com/llms-full.txt
+# sitemap.xml    → https://www.wildskiessafaris.com/sitemap.xml
+# robots.txt     → https://www.wildskiessafaris.com/robots.txt

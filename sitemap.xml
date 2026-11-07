@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/masai_mara_lion_hero.jpeg</image:loc>
+            <image:title>Lion pride in the Masai Mara, Kenya</image:title>
+            <image:caption>Wild Skies Safaris - bespoke fly-in safaris across Kenya</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/amboseli_elephants_kilimanjaro.jpeg</image:loc>
+            <image:title>Elephant herd beneath Mount Kilimanjaro, Amboseli</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/leopard_closeup.jpeg</image:loc>
+            <image:title>Leopard resting in the shade on a Kenyan safari</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/Diani.jpeg</image:loc>
+            <image:title>Diani Beach on Kenya's Indian Ocean coast</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/destinations.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/masai_mara_lion_hero.jpeg</image:loc>
+            <image:title>Masai Mara safari destination in Kenya</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/amboseli_elephants_kilimanjaro.jpeg</image:loc>
+            <image:title>Amboseli safari destination in Kenya</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/tsavo_wildlife_road.jpeg</image:loc>
+            <image:title>Tsavo safari destination in Kenya</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/Diani.jpeg</image:loc>
+            <image:title>Diani Beach safari and coast destination</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/masai-mara.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/masai_mara_leopard_scene.jpeg</image:loc>
+            <image:title>Leopard in the Masai Mara National Reserve</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/mara_lion_pride_1.jpeg</image:loc>
+            <image:title>Lion pride in the Masai Mara</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/amboseli.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/amboseli_elephant_herd.jpeg</image:loc>
+            <image:title>Elephant herd in Amboseli National Park</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/amboseli_elephants_kilimanjaro.jpeg</image:loc>
+            <image:title>Elephants beneath Mount Kilimanjaro in Amboseli</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/tsavo.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/tsavo_red_elephant_landscape.jpeg</image:loc>
+            <image:title>Red elephants and open landscape in Tsavo East and West</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/tsavo_wildlife_road.jpeg</image:loc>
+            <image:title>Wildlife crossing a road in Tsavo, Kenya</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/diani.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/Diani.jpeg</image:loc>
+            <image:title>White sand beach at Diani Beach, Kenya</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/coastal_boutique_escape.jpeg</image:loc>
+            <image:title>Beachfront boutique resort on the Kenyan coast</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/itineraries.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/flight_airstrip_scene.jpeg</image:loc>
+            <image:title>Bush flight airstrip scene on a Kenyan fly-in safari</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/package-details.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/about.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.wildskiessafaris.com/Images/founder_profile_pic.jpeg</image:loc>
+            <image:title>Jaffer Harunany, founder of Wild Skies Safaris</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/blog.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.wildskiessafaris.com/contact.html</loc>
+        <lastmod>2026-11-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

@@ -1,0 +1,28 @@
+{
+  "name": "Wild Skies Safaris",
+  "short_name": "Wild Skies",
+  "description": "Bespoke fly-in safaris across Kenya. Private itineraries to the Masai Mara, Amboseli, Tsavo and Diani Beach with light-aircraft transfers, luxury camps and expert local guides.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1c1c1c",
+  "theme_color": "#f5a623",
+  "categories": ["travel", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/Images/wildskies_logo_alt.jpeg",
+      "sizes": "1600x1600",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
